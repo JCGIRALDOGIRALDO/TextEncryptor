@@ -1,0 +1,64 @@
+@import "../utilities/variables.scss";
+
+.main-content {
+  width: 60%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+
+  &__image {
+    width: 7rem;
+    margin-left: 3rem;
+  }
+
+  // Estilos de subcontenedor del main
+  &__input-section {
+    width: 100%;
+    height: 90%;
+    margin: 2rem 1rem 1rem 6rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  // Estilos generales del contenedor del textarea
+  &__text-input-article {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  // Estilos del textarea
+  &__text-input {
+    width: 100%;
+  }
+
+  // Estilos del subcontenedor de los botones
+  &__button-article {
+    width: 70%;
+    margin: 25rem auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  // Estilos del los 2 botones
+  &__button {
+    width: 48%;
+    height: 3rem;
+    border: 0.2rem solid $accent-color;
+    border-radius: 0.8rem;
+    -webkit-border-radius: 0.8rem;
+    -moz-border-radius: 0.8rem;
+    -ms-border-radius: 0.8rem;
+    -o-border-radius: 0.8rem;
+  }
+
+  // Estilos del boton para encriptar
+  &__button--encrypt {
+    background-color: $secondary-color;
+  }
+
+  // Estilos del boton para desencriptar
+  &__button--decrypt {
+    background-color: $accent-color-btn;
+  }
+}

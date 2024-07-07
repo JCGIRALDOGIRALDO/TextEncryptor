@@ -1,0 +1,70 @@
+@import "../utilities/variables.scss";
+
+// Estilos para contenedor aside principal
+.aside-content {
+  width: 40%;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  //Estilosparaelsubcontenedordeaside&__display-section:;
+  &__display-section {
+    width: 70%;
+    margin: 2.5rem auto;
+    height: 100%;
+    border-radius: 1rem;
+
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    margin: 0.5rem auto;
+    border: 0.2rem solid $accent-color;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    background-color: $background-dark;
+  }
+  // Estilos para para el contenedor de la imagen
+  &__image-article {
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // Estilos de la imagen
+  &__image {
+    max-width: 100%;
+    height: 7rem auto;
+    display: block;
+    margin: auto;
+  }
+
+  // Estilos para el subcontenedor del texto y boton
+  &__text-article {
+    width: 100%;
+    margin-top: 7rem;
+  }
+
+  // Estilo del texto
+  &__encrypted-text {
+    color: $text-color-primary;
+  }
+
+  // Estilos del boton
+  &__copy-button {
+    width: 60%;
+    margin: 1rem auto;
+
+    height: 3rem;
+    border: 0.1rem solid #00c3f1;
+  }
+}
