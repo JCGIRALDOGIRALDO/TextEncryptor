@@ -1,0 +1,26 @@
+{
+  "name": "textencryptor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile-scss": "node-sass assets/src/scss/styles.scss assets/css/styles.css --output-style compressed",
+    "watch-scss": "nodemon -e scss -x \"npm run compile-scss\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JCGIRALDOGIRALDO/TextEncryptor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JCGIRALDOGIRALDO/TextEncryptor/issues"
+  },
+  "homepage": "https://github.com/JCGIRALDOGIRALDO/TextEncryptor#readme",
+  "devDependencies": {
+    "node-sass": "^9.0.0",
+    "nodemon": "^3.1.4"
+  }
+}
