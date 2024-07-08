@@ -14,36 +14,56 @@
   // Estilos de subcontenedor del main
   &__input-section {
     width: 100%;
-    height: 90%;
+    height: 100%;
     margin: 2rem 1rem 1rem 6rem;
     display: flex;
     flex-direction: column;
+    justify-content: end;
+    align-items: center;
   }
 
   // Estilos generales del contenedor del textarea
   &__text-input-article {
     width: 70%;
     margin: 0 auto;
+    height: 100%;
   }
 
   // Estilos del textarea
   &__text-input {
     width: 100%;
+    height: 90%;
+    background-color: $background-dark;
+    border: 0.2rem solid $accent-color;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    color: $accent-color;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    &::placeholder {
+      color: $accent-color;
+    }
   }
 
   // Estilos del subcontenedor de los botones
   &__button-article {
-    width: 70%;
-    margin: 25rem auto;
+    width: 75%;
+    margin: 1.5rem auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+
+    align-items: center;
+    align-content: center;
   }
 
   // Estilos del los 2 botones
   &__button {
     width: 48%;
     height: 3rem;
+    margin: 0.5rem auto;
     border: 0.2rem solid $accent-color;
     border-radius: 0.8rem;
     -webkit-border-radius: 0.8rem;
