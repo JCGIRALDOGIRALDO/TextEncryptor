@@ -36,6 +36,8 @@
     color: $accent-color;
     padding: 1.5rem;
     font-size: 1.5rem;
+    font-family: $good-font;
+
     &::placeholder {
       color: $accent-color;
     }
@@ -54,22 +56,38 @@
   }
 
   // Estilos de los botones
+  // Estilos del los 2 botones
   &__button {
     width: 48%;
     height: 3rem;
     margin: 0.5rem auto;
     border: 0.2rem solid $accent-color;
     border-radius: 0.8rem;
+    font-family: $good-font;
+    font-weight: bold;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+
+    // Efecto de sombra
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Sombra suave
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); // Sombra más pronunciada en hover
+    }
   }
 
   // Estilos del botón para encriptar
   &__button--encrypt {
     background-color: $secondary-color;
+    font-family: $good-font;
+    font-weight: bold;
+    color: $text-color-primary;
   }
 
   // Estilos del botón para desencriptar
   &__button--decrypt {
-    background-color: $accent-color-btn;
+    background-color: $text-color-darck-primary;
   }
 
   @media (max-width: 1000px) {
