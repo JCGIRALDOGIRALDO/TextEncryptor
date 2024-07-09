@@ -8,34 +8,24 @@
   flex-direction: column;
   justify-content: right;
 
-  //Estilosparaelsubcontenedordeaside&__display-section:;
+  // Estilos para el subcontenedor de aside__display-section
   &__display-section {
     width: 80%;
     margin: 0.5rem auto;
     height: 100%;
     border-radius: 1rem;
-    -webkit-border-radius: 1rem;
-    -moz-border-radius: 1rem;
-    -ms-border-radius: 1rem;
-    -o-border-radius: 1rem;
-    margin: 0.5rem auto;
     border: 0.2rem solid $accent-color;
-    border-radius: 1rem;
-    -webkit-border-radius: 1rem;
-    -moz-border-radius: 1rem;
-    -ms-border-radius: 1rem;
-    -o-border-radius: 1rem;
     background-color: $background-dark;
     display: flex;
     flex-direction: column;
   }
-  // Estilos para para el contenedor de la imagen
+
+  // Estilos para el contenedor de la imagen
   &__image-article {
     width: 90%;
     margin: 0 auto;
     height: auto;
     display: flex;
-    overflow: hidden;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -45,7 +35,6 @@
   &__image {
     max-width: 90%;
     height: 7rem auto;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -53,6 +42,7 @@
     margin: 5rem auto;
   }
 
+  // Estilos del texto
   &__text {
     color: $accent-color;
     text-align: center;
@@ -60,37 +50,45 @@
     align-content: center;
   }
 
-  // Estilos para el subcontenedor del texto y boton
+  // Estilos para el subcontenedor del texto y botón
   &__text-article {
     width: 80%;
     height: auto;
     margin: 0 auto;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 
-  // Estilo del texto
+  // Estilo del texto encriptado
   &__encrypted-text {
     margin-top: 1rem;
     width: 100%;
     height: 100%;
-    overflow: hidden;
     color: $text-color-primary;
   }
 
-  // Estilos del boton
+  // Estilos del botón
   &__copy-button {
     width: 100%;
     margin: 2rem auto;
     height: 3rem;
     border: 0.1rem solid #00c3f1;
     border-radius: 1rem;
-    -webkit-border-radius: 1rem;
-    -moz-border-radius: 1rem;
-    -ms-border-radius: 1rem;
-    -o-border-radius: 1rem;
+  }
+
+  @media (max-width: 1000px) {
+    width: 100%; // Ajusta el ancho de .aside-content en pantallas más grandes
+    justify-content: center; // Centra el contenido en pantallas más grandes
+    align-items: center; // Centra el contenido en pantallas más grandes
+
+    &__display-section {
+      margin: 1rem auto; // Ajusta el margen del subcontenedor de display-section
+    }
+
+    &__image-article {
+      width: 80%; // Ajusta el ancho del contenedor de imagen en pantallas más grandes
+    }
   }
 }
