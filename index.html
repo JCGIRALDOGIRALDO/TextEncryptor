@@ -45,18 +45,32 @@
               src="./assets/src/img/Img_buscar_1.png"
               alt="imagen de busqueda"
               class="aside-content__image"
+              id="asideImage"
             />
           </article>
           <article class="aside-content__text-article">
-            <p class="aside-content__encrypted-text">
-              Texto encriptado o desencriptado aparecerá aquí
-            </p>
-            <button class="aside-content__copy-button">Copiar</button>
+            <ul
+              id="encryptedTextList"
+              class="aside-content__encrypted-text"
+            ></ul>
+            <button
+              id="copyButton"
+              class="aside-content__copy-button"
+              style="display: none"
+            >
+              Copiar
+            </button>
+            <button
+              id="clearButton"
+              class="aside-content__clear-button"
+              style="display: none"
+            >
+              Limpiar Lista
+            </button>
           </article>
         </section>
       </aside>
     </div>
     <script src="./assets/src/js/app.js"></script>
-    <script src="./assets/src/js/app2.js"></script>
   </body>
 </html>

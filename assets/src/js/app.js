@@ -1,71 +1,91 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Obtener el textarea y los botones por su ID
-  let textAreaElement = document.getElementById("textEncriptar");
-  let encryptButton = document.getElementById("encryptButton");
-  let decryptButton = document.getElementById("decryptButton");
-  const shift = 3; // Definir el desplazamiento para el cifrado César
+  const textAreaElement = document.getElementById("textEncriptar");
+  const encryptButton = document.getElementById("encryptButton");
+  const decryptButton = document.getElementById("decryptButton");
+  const asideImage = document.getElementById("asideImage");
+  const encryptedTextList = document.getElementById("encryptedTextList");
+  const copyButton = document.getElementById("copyButton");
+  const clearButton = document.getElementById("clearButton");
 
-  // Función para cifrar el texto usando el cifrado César
-  function encryptCaesar(text, shift) {
+  function encrypt(text) {
     return text
-      .split("")
-      .map((char) => {
-        const charCode = char.charCodeAt(0);
-        // Si es una letra mayúscula
-        if (charCode >= 65 && charCode <= 90) {
-          return String.fromCharCode(((charCode - 65 + shift) % 26) + 65);
-        }
-        // Si es una letra minúscula
-        if (charCode >= 97 && charCode <= 122) {
-          return String.fromCharCode(((charCode - 97 + shift) % 26) + 97);
-        }
-        // Si no es una letra, devolver el carácter sin cambios
-        return char;
-      })
-      .join("");
+      .replace(/e/g, "enter")
+      .replace(/i/g, "imes")
+      .replace(/a/g, "ai")
+      .replace(/o/g, "ober")
+      .replace(/u/g, "ufat");
   }
 
-  // Función para descifrar el texto usando el cifrado César
-  function decryptCaesar(encryptedText, shift) {
+  function decrypt(encryptedText) {
     return encryptedText
-      .split("")
-      .map((char) => {
-        const charCode = char.charCodeAt(0);
-        // Si es una letra mayúscula
-        if (charCode >= 65 && charCode <= 90) {
-          return String.fromCharCode(((charCode - 65 - shift + 26) % 26) + 65);
-        }
-        // Si es una letra minúscula
-        if (charCode >= 97 && charCode <= 122) {
-          return String.fromCharCode(((charCode - 97 - shift + 26) % 26) + 97);
-        }
-        // Si no es una letra, devolver el carácter sin cambios
-        return char;
-      })
-      .join("");
+      .replace(/enter/g, "e")
+      .replace(/imes/g, "i")
+      .replace(/ai/g, "a")
+      .replace(/ober/g, "o")
+      .replace(/ufat/g, "u");
   }
 
-  // Añadir evento click al botón de encriptar
+  function showEncryptedText(text) {
+    const listItem = document.createElement("li");
+    listItem.textContent = text;
+    encryptedTextList.appendChild(listItem);
+    asideImage.style.display = "none";
+    copyButton.style.display = "block";
+    clearButton.style.display = "block";
+  }
+
+  function clearEncryptedText() {
+    encryptedTextList.innerHTML = "";
+    asideImage.style.display = "block";
+    copyButton.style.display = "none";
+    clearButton.style.display = "none";
+  }
+
   encryptButton.addEventListener("click", function () {
-    let encriptarTexto = textAreaElement.value;
-    if (encriptarTexto) {
-      let encryptedText = encryptCaesar(encriptarTexto, shift);
+    const text = textAreaElement.value;
+    if (text) {
+      const encryptedText = encrypt(text);
       textAreaElement.value = encryptedText;
+      showEncryptedText(encryptedText);
       console.log("Encrypted Text:", encryptedText);
     } else {
       console.error("No hay texto para encriptar");
     }
   });
 
-  // Añadir evento click al botón de desencriptar
   decryptButton.addEventListener("click", function () {
-    let encriptarTexto = textAreaElement.value;
-    if (encriptarTexto) {
-      let decryptedText = decryptCaesar(encriptarTexto, shift);
+    const text = textAreaElement.value;
+    if (text) {
+      const decryptedText = decrypt(text);
       textAreaElement.value = decryptedText;
       console.log("Decrypted Text:", decryptedText);
     } else {
       console.error("No hay texto para desencriptar");
+    }
+  });
+
+  copyButton.addEventListener("click", function () {
+    const range = document.createRange();
+    range.selectNode(encryptedTextList);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+
+    try {
+      document.execCommand("copy");
+      window.getSelection().removeAllRanges();
+      console.log("Texto copiado al portapapeles");
+    } catch (err) {
+      console.error("Error al copiar el texto: ", err);
+    }
+  });
+
+  clearButton.addEventListener("click", function () {
+    clearEncryptedText();
+  });
+
+  textAreaElement.addEventListener("input", function () {
+    if (textAreaElement.value === "") {
+      clearEncryptedText();
     }
   });
 });
