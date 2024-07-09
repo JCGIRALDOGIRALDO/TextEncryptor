@@ -2,16 +2,16 @@
 
 // Estilos para contenedor aside principal
 .aside-content {
-  width: 40%;
-  margin: 0 auto;
-  height: 100%;
+  width: 30%;
+  height: auto;
   display: flex;
   flex-direction: column;
+  justify-content: right;
 
   //Estilosparaelsubcontenedordeaside&__display-section:;
   &__display-section {
-    width: 70%;
-    margin: 2.5rem auto;
+    width: 80%;
+    margin: 0.5rem auto;
     height: 100%;
     border-radius: 1rem;
     -webkit-border-radius: 1rem;
@@ -28,12 +28,10 @@
     background-color: $background-dark;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
   // Estilos para para el contenedor de la imagen
   &__image-article {
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
     height: auto;
     display: flex;
@@ -45,19 +43,29 @@
 
   // Estilos de la imagen
   &__image {
-    max-width: 100%;
+    max-width: 90%;
     height: 7rem auto;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 2rem auto;
+    margin: 5rem auto;
+  }
+
+  &__text {
+    color: $accent-color;
+    text-align: center;
+    align-items: center;
+    align-content: center;
   }
 
   // Estilos para el subcontenedor del texto y boton
   &__text-article {
     width: 80%;
+    height: auto;
     margin: 0 auto;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,12 +75,15 @@
   // Estilo del texto
   &__encrypted-text {
     margin-top: 1rem;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
     color: $text-color-primary;
   }
 
   // Estilos del boton
   &__copy-button {
-    width: 60%;
+    width: 100%;
     margin: 2rem auto;
     height: 3rem;
     border: 0.1rem solid #00c3f1;

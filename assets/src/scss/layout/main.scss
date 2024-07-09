@@ -1,32 +1,29 @@
 @import "../utilities/variables.scss";
 
 .main-content {
-  width: 60%;
+  width: 70%;
   height: auto;
   display: flex;
   flex-direction: column;
-
-  &__image {
-    width: 7rem;
-    margin-left: 3rem;
-  }
+  justify-content: left;
 
   // Estilos de subcontenedor del main
   &__input-section {
-    width: 100%;
+    width: 90%;
     height: 100%;
-    margin: 2rem 1rem 1rem 6rem;
+    margin: 3rem auto;
     display: flex;
     flex-direction: column;
-    justify-content: end;
-    align-items: center;
   }
 
   // Estilos generales del contenedor del textarea
   &__text-input-article {
-    width: 70%;
-    margin: 0 auto;
+    width: 80%;
+    margin-top: 3rem;
+    margin-left: 8rem;
     height: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
   // Estilos del textarea
@@ -51,10 +48,11 @@
   // Estilos del subcontenedor de los botones
   &__button-article {
     width: 75%;
-    margin: 1.5rem auto;
+    height: 10%;
+    margin-top: 1.5rem;
+    margin-left: 11rem;
     display: flex;
     flex-direction: row;
-
     align-items: center;
     align-content: center;
   }

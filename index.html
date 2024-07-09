@@ -8,68 +8,81 @@
   </head>
   <body>
     <div class="container">
-      <main class="main-content">
+      <header class="header-content">
         <img
           src="./assets/src/img/logo_icon.png"
           alt="logo de la web"
-          class="main-content__image"
+          class="header-content__image"
         />
-        <section class="main-content__input-section">
-          <article class="main-content__text-input-article">
-            <textarea
-              id="textEncriptar"
-              class="main-content__text-input"
-              placeholder="Ingrese el texto a encriptar o desencriptar"
-            ></textarea>
-          </article>
-          <article class="main-content__button-article">
-            <button
-              id="encryptButton"
-              class="main-content__button main-content__button--encrypt"
-            >
-              Encriptar
-            </button>
-            <button
-              id="decryptButton"
-              class="main-content__button main-content__button--decrypt"
-            >
-              Desencriptar
-            </button>
-          </article>
-        </section>
-      </main>
-      <aside class="aside-content">
-        <section class="aside-content__display-section">
-          <article class="aside-content__image-article">
-            <img
-              src="./assets/src/img/Img_buscar_1.png"
-              alt="imagen de busqueda"
-              class="aside-content__image"
-              id="asideImage"
-            />
-          </article>
-          <article class="aside-content__text-article">
-            <ul
-              id="encryptedTextList"
-              class="aside-content__encrypted-text"
-            ></ul>
-            <button
-              id="copyButton"
-              class="aside-content__copy-button"
-              style="display: none"
-            >
-              Copiar
-            </button>
-            <button
-              id="clearButton"
-              class="aside-content__clear-button"
-              style="display: none"
-            >
-              Limpiar Lista
-            </button>
-          </article>
-        </section>
-      </aside>
+        <h1 class="header-content__title">
+          TextEncryptor - Encripta Textos con Seguridad
+        </h1>
+      </header>
+      <div class="display-container">
+        <main class="main-content">
+          <section class="main-content__input-section">
+            <article class="main-content__text-input-article">
+              <textarea
+                id="textEncriptar"
+                class="main-content__text-input"
+                placeholder="Ingrese el texto a encriptar o desencriptar"
+              ></textarea>
+            </article>
+            <article class="main-content__button-article">
+              <button
+                id="encryptButton"
+                class="main-content__button main-content__button--encrypt"
+              >
+                Encriptar
+              </button>
+              <button
+                id="decryptButton"
+                class="main-content__button main-content__button--decrypt"
+              >
+                Desencriptar
+              </button>
+            </article>
+          </section>
+        </main>
+        <aside class="aside-content">
+          <section class="aside-content__display-section">
+            <article class="aside-content__image-article">
+              <img
+                src="./assets/src/img/Img_buscar_1.png"
+                alt="imagen de busqueda"
+                class="aside-content__image"
+                id="asideImage"
+              />
+              <h2 class="aside-content__text" id="asideText">
+                Ningún mensaje fue encontrado
+              </h2>
+            </article>
+            <article class="aside-content__text-article">
+              <ul
+                id="encryptedTextList"
+                class="aside-content__encrypted-text"
+              ></ul>
+              <button
+                id="copyButton"
+                class="aside-content__copy-button"
+                style="display: none"
+              >
+                Copiar
+              </button>
+              <button
+                id="clearButton"
+                class="aside-content__clear-button"
+                style="display: none"
+              >
+                Limpiar Lista
+              </button>
+            </article>
+          </section>
+        </aside>
+      </div>
+      <footer class="footer-content">
+        <h2>hola</h2>
+      </footer>
     </div>
     <script src="./assets/src/js/app.js"></script>
   </body>

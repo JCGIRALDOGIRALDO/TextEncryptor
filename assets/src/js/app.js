@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const encryptButton = document.getElementById("encryptButton");
   const decryptButton = document.getElementById("decryptButton");
   const asideImage = document.getElementById("asideImage");
+  const asideText = document.getElementById("asideText");
   const encryptedTextList = document.getElementById("encryptedTextList");
   const copyButton = document.getElementById("copyButton");
   const clearButton = document.getElementById("clearButton");
@@ -30,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     listItem.textContent = text;
     encryptedTextList.appendChild(listItem);
     asideImage.style.display = "none";
+    asideText.style.display = "none";
     copyButton.style.display = "block";
     clearButton.style.display = "block";
   }
@@ -37,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function clearEncryptedText() {
     encryptedTextList.innerHTML = "";
     asideImage.style.display = "block";
+    asideText.style.display = "block";
     copyButton.style.display = "none";
     clearButton.style.display = "none";
   }
